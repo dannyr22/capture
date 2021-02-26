@@ -1,52 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
 import { About } from '../styles';
-import Toggle from './Toggle'
+import Toggle from './Toggle';
+import { motion } from 'framer-motion';
+import { AnimateSharedLayout } from 'framer-motion'
+import { useScroll } from './useScroll';
+import { scrollReveal } from '../animation';
+
 
 const FaqSection = () => {
+  const [element, controls] = useScroll()
   return ( 
-    <Faq>
+    <Faq variants={scrollReveal} animate={controls} initial="hidden" ref={element}>
       <h2>Any Questions <span>FAQ</span></h2>
-      <Toggle>
-      <div className="question">
-        <h4>How do I start</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
-        </div>
-        <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <Toggle>
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
-        </div>
-        <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <Toggle>
-      <div className="question">
-        <h4>Different payment methods</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
-        </div>
-        <div className="faq-line"></div>
-        </div>
-      </Toggle>
-      <Toggle>
-      <div className="question">
-        <h4>What products do you offer</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
-        </div>
-        <div className="faq-line"></div>
-        </div>
-      </Toggle>
+      <AnimateSharedLayout>
+        <Toggle title='How do I start?'>
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
+          </div>
+        </Toggle>
+        <Toggle title="What is the Daily Schedule?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
+          </div>
+        </Toggle>
+        <Toggle title="Different payment methods?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
+          </div>
+        </Toggle>
+        <Toggle title="What products do you offer?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dignissimos?</p>
+          </div>
+          </Toggle>
+        </AnimateSharedLayout>
       </Faq>
    );
 }
