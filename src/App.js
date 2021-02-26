@@ -6,7 +6,8 @@ import OurWork from './pages/OurWork';
 import ContactUs from './pages/ContactUs';
 import { Switch, Route, useLocation } from 'react-router-dom'
 import MovieDetail from './pages/MovieDetail';
-import {AnimatePresence} from 'framer-motion'
+import { AnimatePresence } from 'framer-motion';
+
 
 function App() {
   const location = useLocation();
