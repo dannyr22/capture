@@ -78,3 +78,12 @@ export const scrollReveal = {
     transition: {duration: 0.75}
   }
 }
+
+
+export const slidySlider = {
+  hidden: { width: '0%' },
+  show: {
+    width: '100%',
+    transition: {duration: 1, ease: 'easeOut'}
+  }
+}
