@@ -8,6 +8,11 @@ align-items: center;
 justify-content: space-between;
 padding: 5rem 10rem;
 color: white;
+@media (max-width: 1300px) {
+  display: block;
+  padding: 2rem 2rem;
+  text-align: center;
+}
 `
 export const Description = styled.div`
   flex: 1;
@@ -16,6 +21,12 @@ export const Description = styled.div`
   h2{
     font-weight: lighter;
   }
+  @media (max-width: 1300px) {
+  button{
+    margin: 2rem 0rem 5rem 0rem;
+  }
+  padding: 0rem;
+}
 `
 
 export const Image = styled.div`

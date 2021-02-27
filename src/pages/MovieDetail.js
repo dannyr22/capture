@@ -26,15 +26,15 @@ const MovieDetail = () => {
       <HeadLine>
         <h2>{movie.title}</h2>
         <img src={movie.mainImg} alt="movie"/>
-          </HeadLine>
-          <Awards>
-            {movie.awards.map(award => (
-              <Award title={award.title} description={award.description} key={award.title}/>
-            ))}
-          </Awards>
-          <ImageDisplay>
-            <img src={movie.secondaryImg} alt="second"/>
-          </ImageDisplay>
+      </HeadLine>
+        <Awards>
+          {movie.awards.map(award => (
+            <Award title={award.title} description={award.description} key={award.title}/>
+          ))}
+        </Awards>
+        <ImageDisplay>
+          <img src={movie.secondaryImg} alt="second"/>
+        </ImageDisplay>
       </Details>
       )}
     </>
@@ -46,32 +46,53 @@ export default MovieDetail;
 const Details = styled(motion.div)`
 color: white;
 
-
 `
 const HeadLine = styled.div`
 min-height: 90vh;
-padding-top: 20vh;
+padding-top: 10vh;
 position: relative;
+display: block;
+flex: 1;
 h2{
-  position: absolute;
+  /* position: absolute;
   top: 5%;
   left: 40%;
-  transform: tranlate(-50%, -10%);
+  transform: tranlate(-50%, -10%); */
+  width: 100%; 
+  text-align: center;
 }
 img{
   width: 100%;
   height: 70vh;
   object-fit: cover;
+  overflow: hidden;
+  display: flex;
+}
+@media (max-width: 1300px) {
+  display: block;
+  padding: 2rem 2rem;
+  text-align: center;
+  min-height: 70vh;
+  @media (max-width: 800px) {
+  min-height: 40vh;
+  img{
+    height: 40vh;
+  }
 }
 
 `
 
 const Awards = styled.div`
- min-height: 80vh;
+ min-height: 50vh;
  display: flex;
- margin: 5rem 10rem;
+ margin: 2rem 10rem;
  align-items: center;
  justify-content: space-around;
+ @media (max-width: 1500px) {
+ display: block;
+ margin: 2rem 2rem;
+ 
+}
 `
 const AwardStyle = styled.div`
 padding: 5rem;
@@ -87,6 +108,9 @@ h3{
 p{
   padding: 2rem 0rem;
 }
+@media (max-width: 1300px){
+  padding: 2rem;
+}
 `
 
 const ImageDisplay = styled.div`
@@ -95,6 +119,15 @@ const ImageDisplay = styled.div`
     width: 100%;
     height: 100vh;
     object-fit: cover;
+  }
+  @media (max-width: 1300px) {
+  padding: 2rem 2rem;
+  text-align: center;
+  min-height: 70vh;
+  @media (max-width: 800px) {
+  min-height: 40vh;
+  img{
+    height: 40vh;
   }
 `
 const Award = ({title, description}) => {
