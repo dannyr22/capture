@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Webpage for film company made with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project utilizes framer motion and styled components
+
+![homepage](src/img/homepage.jpg)
+
 
 ## Available Scripts
 
