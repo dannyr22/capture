@@ -2,7 +2,7 @@
 
 This project utilizes framer motion and styled components
 
-![home screen](img/homepage.jpg)
+![homepage](src/img/homepage.jpg)
 
 
 ## Available Scripts
