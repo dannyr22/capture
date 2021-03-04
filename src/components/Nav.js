@@ -6,7 +6,7 @@ const Nav = () => {
   
   return ( 
     <StyledNav>
-      <h1><Link to="/" id="logo">Capture</Link></h1>
+      <h1><Link to="/" id="logo">Snapshot</Link></h1>
       <Burger />
       </StyledNav>
    );

@@ -3,7 +3,8 @@ import home1 from '../img/home1.png'
 import { About, Description, Image, Hide } from '../styles';
 import { motion } from 'framer-motion';
 import { titleAnim, fade, photoAnim } from '../animation';
-import Wave from './Wave'
+import Wave from './Wave';
+import home3 from '../img/home3.jfif'
 
 const AboutSection = () => {
 
@@ -29,7 +30,7 @@ const AboutSection = () => {
           variants={photoAnim}
           initial="hidden"
           animate="show"
-          src={home1}
+          src={home3}
           alt="guy with a camera" />
       </Image>
       <Wave />
