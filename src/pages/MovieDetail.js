@@ -16,6 +16,7 @@ const MovieDetail = () => {
   useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => (stateMovie.url === url))
     setMovie(currentMovie[0])
+    console.log(setMovies)
   }, [movies, url])
   
   
@@ -79,7 +80,7 @@ img{
     height: 40vh;
   }
 }
-
+}
 `
 
 const Awards = styled.div`
@@ -128,6 +129,8 @@ const ImageDisplay = styled.div`
   min-height: 40vh;
   img{
     height: 40vh;
+  }
+  }
   }
 `
 const Award = ({title, description}) => {
